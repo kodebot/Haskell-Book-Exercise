@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: f1c92697ee48119ef73d3b5e015dcdeb4fd36178006f86fd60782bb1907a639b
+-- hash: f65853244014f3a6d85c876194ba3f09d72406e93c3e3bf8da832a51aa534a6f
 
 name:           Haskell-Book-Exercise
 version:        0.1.0.0
@@ -26,8 +26,6 @@ source-repository head
   location: https://github.com/githubuser/Haskell-Book-Exercise
 
 library
-  exposed-modules:
-      Lib
   other-modules:
       Paths_Haskell_Book_Exercise
   hs-source-dirs:
