@@ -60,3 +60,62 @@ example:
 triple x = x * 3
 ```
 use `camelCase` for functions and variables
+
+## 2.5 Evaluation
+Reducing an expression to value is called `evaluation`. Value is irreducible.
+
+Applications of functions to arguments are reducible.
+
+Haskell does lazy evaluation. ie. it doesn't evaluate a term until it is forced by other term refers it
+
+The final, irreducible form is called canonical or normal form.
+
+Haskell doesn't reduce everything to canonical form immediately. It reduces expressions to what is known as `Weak Head Normal Form` or `WHNF`
+
+Here is an example of `WHNF`
+
+```
+(f -> (1, 2 + 2)) 2 // expression
+(1, 2 + 2) // WHNF
+```
+In the example above `2 + 2` is not evaluated to `4` until the last possible moment
+
+## 2.6 Infix Operators
+Functions are prefix by default.
+Operators are infix by default.
+Operators are also functions.
+
+All operators are functions but not all functions are operators.
+
+Functions with name that are alphanumeric are prefix by default but can be made infix by wrapping it in backticks (`) (but not true for all the functions)
+
+Functions with name that are symbol are infix by default but can be made prefix by wrapping it in parenthesis
+
+```
+2 + 3
+(+) 2 3
+div 20 10
+20 `div` 10
+```
+### Parentheses and association
+Infix operators and functions have association. We can get this detail using `:info` command in GHCi
+
+```
+:info (*)
+```
+returns
+`infixl 7`
+`l` - indicates left association
+`7` - indicates the precedence in the scale of 0-9
+
+left association example
+```
+    2 * 3 * 4 = (2 * 3) * 4
+```
+
+right association example (exponent)
+```
+    2 ^ 3 ^ 4 = 2 ^ ( 3 ^ 4)
+```
+
+general math rules hold good.
