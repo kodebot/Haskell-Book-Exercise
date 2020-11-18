@@ -1,5 +1,5 @@
 {-|
-Evaluation
+2.5 Evaluation
 1. Given the following lines of code as they might appear in a
 source file, how would you change them to use them directly in
 the REPL?
@@ -25,7 +25,7 @@ betterPiTies x = pi * x
 
 
 {-|
-Infix Operators
+2.6 Infix Operators
 Below are some pairs of functions that are alike except for parenthesization.
 Read them carefully and decide if the parentheses change
 the results of the function. Check your work in GHCi.
