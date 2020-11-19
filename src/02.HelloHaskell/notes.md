@@ -146,3 +146,58 @@ let x = 6
 ```
 
 break to new line if it exceeds 100 columns
+
+2.8 Arithmetic functions in Haskell
+
+```
++ addition
+```
+```
+- subtraction
+```
+```
+* multiplication
+```
+```
+/ fractional division
+
+100 / 3 = 33.33333333333336
+
+```
+
+```
+div integer division (value is rounded down)
+
+100 / 3 = 33
+20 / (-6) = -4 -- note this is -4 because the value is rounded down
+```
+
+```
+quot integer division (value is rounded towards zero)
+100 / 3 = 33
+20 / (-6) = -3 -- not this is -3 because the value is rounded towards zero
+```
+
+```
+rem remainder after division (quot)
+
+4 `rem` 2 = 0
+5 `rem` 2 = 1
+this is uses quot
+so, rem 20 (-6) = 2
+quot 20 (-6) = -3
+
+-6 * -3(quot) + 2(rem) = 20
+```
+
+```
+mod remainder after division (div)
+4 `mod` 2 = 0
+5 `mod` 2 = 1
+mod uses div
+
+so, mod 20 (-6) = -4
+div 20 (-6) = -4
+
+-6 * -4(div) + (-4)(mod remainder) = 20
+```
