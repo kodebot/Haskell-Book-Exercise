@@ -42,3 +42,22 @@ the results of the function. Check your work in GHCi.
         b) f x = x / (2 + 9)
         Ans: Yes. let x = 110 a) 55 + 9 b) 10
 -}
+
+{-|
+2.7 Declaring Values
+Heal the sick
+1. let area x = 3. 14 * (x * x)
+2. let double x = b * 2
+3. x = 7
+     y = 10
+   f = x + y
+-}
+
+-- Answers
+area x = 3.14 * (x * x) -- space after 3. (3. 14)
+
+double x = x * 2 -- b is undefined
+
+x = 7
+y = 10 -- incorrect indentation of y
+f = x +y 

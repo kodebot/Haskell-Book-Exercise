@@ -119,3 +119,30 @@ right association example (exponent)
 ```
 
 general math rules hold good.
+
+## 2.7 Declaring Values
+Use module to group functions that can be imported by name. 
+Use PascalCase for module name
+```
+module Chapter2 where
+```
+
+Indentation matters (incorrect one breaks the code)
+Use spaces instead of tabs
+
+Indentation of first line of code in a file decides the base indentation 
+
+Part of an expression must be indented under the beginning of the expression
+
+```
+let x = 
+    6
+ ```
+
+Grouped parts of an expression must be indented at the same level
+```
+let x = 6
+    y = 8
+```
+
+break to new line if it exceeds 100 columns
