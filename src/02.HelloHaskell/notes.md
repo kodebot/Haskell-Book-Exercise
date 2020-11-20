@@ -175,7 +175,7 @@ div integer division (value is rounded down)
 ```
 quot integer division (value is rounded towards zero)
 100 / 3 = 33
-20 / (-6) = -3 -- not this is -3 because the value is rounded towards zero
+20 / (-6) = -3 -- note this is -3 because the value is rounded towards zero
 ```
 
 ```
@@ -200,4 +200,38 @@ so, mod 20 (-6) = -4
 div 20 (-6) = -4
 
 -6 * -4(div) + (-4)(mod remainder) = 20
+```
+
+### Using mod
+`mod` and `rem` look like they are doing the same work but they are not
+
+`mod` is doing modular arithmetic. One best example of modular arithmetic is clock
+
+ For example adding 8 hour to 8 hour is not 16 but 4. It is modular arithmetic of 12
+
+
+ the difference between `rem` and `mod` is clear when we use negative numbers
+
+ ```
+ (3 - 12) `mod` 7 = 5
+ (3 - 12 ) `rem` 7 = -2 (note: this is the C# behaviour)
+ ```
+
+ When using `mod` the sign of result will be sign of divisor when dividend and divisor have different signs
+```
+    -5 `mod` 2 = 1
+    -5 `mod` -2 = -1
+    -5 `mod` -2 = -1
+```
+
+### Negative numbers
+minus symbol (-) is alias for unary operator `negate`
+minus symbol is also overloaded to indicate negative numbers
+
+when negative number is used in an expression when it appears next to an operator with same precedence
+then Haskell needs some help
+
+```
+100 + -9 --> error
+100 + (-9) --> OK
 ```
