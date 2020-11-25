@@ -147,7 +147,7 @@ let x = 6
 
 break to new line if it exceeds 100 columns
 
-2.8 Arithmetic functions in Haskell
+## 2.8 Arithmetic functions in Haskell
 
 ```
 + addition
@@ -235,3 +235,34 @@ then Haskell needs some help
 100 + -9 --> error
 100 + (-9) --> OK
 ```
+
+## 2.9 Parenthesization
+
+- use parenthesis to use infix operator in prefix position
+- partial application of operator (aka sectioning) can be done using parenthesis
+
+```
+(+ 2) 2 = 4
+(2 +) 2 = 4
+```
+`+` is commutative so order doesn't matter
+
+```
+(/ 1) 2 = 2
+(1 /) 2 = 0.5
+```
+`/` is not commutative so order matters
+
+subtract is special
+```
+(-1) 2 --> this will not work (-1) is treated is negative number
+^^ can be changed to (subtract 1) 
+(1 - ) 2 --> this is OK
+```
+
+`$` is special operator which is lowest priority right associative operator, mainly used to remove parenthesis when writing expressions
+
+```
+(2 ^) (2 + 2) can be rewritten as (2 ^) $ 2 + 2
+```
+the definition of `$` is `f $ a = f a` 
