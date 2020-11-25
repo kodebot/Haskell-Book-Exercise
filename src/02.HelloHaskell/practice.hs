@@ -2,5 +2,5 @@ sayHello :: String -> IO ()
 sayHello x =
     putStrLn ("Hello, " ++ x ++ "!")
 
-triple :: int -> int
+triple ::Num a => a -> a
 triple x = x * 3

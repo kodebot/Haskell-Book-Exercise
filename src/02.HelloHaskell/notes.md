@@ -266,3 +266,20 @@ subtract is special
 (2 ^) (2 + 2) can be rewritten as (2 ^) $ 2 + 2
 ```
 the definition of `$` is `f $ a = f a` 
+
+## 2.10 Let and where
+
+`let` is used to start an expression along with `in` keyword
+`where` is used in the expression
+
+difference can be best understood with examples
+
+```
+let x = 6
+    y = 8
+in x + y
+
+sum = x + y
+    where x = 6
+          y = 8
+```

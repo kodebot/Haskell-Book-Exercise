@@ -61,3 +61,35 @@ double x = x * 2 -- b is undefined
 x = 7
 y = 10 -- incorrect indentation of y
 f = x +y 
+
+{-|
+2.10 Head code
+1. let x = 5 in x
+Ans: 
+5
+echo  = x
+    where x = 5
+
+2. let x = 5 in x * x
+Ans:
+25
+
+mult  = x * x
+    where x = 5
+
+3. let x = 5; y = 6 in x * y
+Ans: 
+30
+
+times = x * y
+    where x = 5
+          y = 6
+
+4. let x = 3; y = 1000 in x + 3
+Ans:
+6
+
+exp = x + 3
+    where x = 3
+          y = 1000
+-}
