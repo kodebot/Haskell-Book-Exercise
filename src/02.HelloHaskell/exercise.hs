@@ -108,3 +108,49 @@ pa2 = (^) 10 (1 + 1)
 
 p3 = 2 ^ 2 * 4 ^ 5 + 1
 pa3 = ((2 ^ 2) * (4 ^ 5)) + 1
+
+-- Equivalent Expressions
+{-|
+1 + 1 = 2
+10 ^ 2 = 10 + 9 * 10 -> 9 * 10 is evaluated first
+400 - 37 != (-) 37 400 -> right hand side is equivalent to 37 - 400
+100 `div` 3 != 100 / 3 -> `div` is integer division / is not
+2 * 5 + 18 != 2 * (5 + 8) -> parenthesis changes the order of evaluation
+-}
+
+
+-- more fun with functions
+{-|
+z = 7
+y = z + 8
+x = y ^ 2
+waxOn = x * 5 -- 1125
+
+-- 1
+10 + waxOn --  1135
+(+10) waxOn -- 1135
+(-) 15 waxOn -- -1110
+(-) waxOn 15 -- 1110
+
+-- 2
+triple x = x * 3
+
+-- 3
+triple waxOn -- 1125 * 3 -> 3375
+-}
+
+-- 4
+waxOn = x * 5
+    where x = y ^ 2
+          y = z + 8
+          z = 7
+
+-- 5
+triple x = x * 3
+
+-- 6
+waxOff x = triple x
+
+-- 7
+res1 = waxOff 10 -- 30
+res2 = waxOff (-50 ) -- -150

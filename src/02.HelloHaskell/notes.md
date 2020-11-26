@@ -283,3 +283,17 @@ sum = x + y
     where x = 6
           y = 8
 ```
+
+## 2.11 Chapter Extercises
+
+## 2.12 Definitions
+Parameter is what appears in the function declaration.
+Argument is the value/variable passed to replace parameters with when the function is called
+Expression is sequence of symbols that follows syntax rules and can be reduced
+Value is something that cannot be reduced any further
+Function is same as mathematical function
+infix notation 2 + 2
+operator symbol alias for function
+syntactic sugar - shortcut to write something that is not readable/easy otherwise
+
+
